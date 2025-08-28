@@ -1,22 +1,23 @@
-import { useState } from "react";
-import GeneralInfo from "./components/GeneranlInfo";
-import Education from "./components/Education";
-import Experience from "./components/Experience";
+import { useState } from "react"
+import './App.css'
+import GeneralInfo from "./components/GeneranlInfo"
+import Education from "./components/Education"
+import Experience from "./components/Experience"
 
 function App() {
   return (
     <>
       <h1>Resume Builder</h1>
-      <h2>Create your profesional resume in minutes</h2>
-      <form action="">
+      <p>Create your profesional resume in minutes</p>
+      <form id="resume-form" action="">
         <GeneralInfo />
         <br />
         <Education />
         <br />
         <Experience />
         <br />
-        <button>Generate Resume</button>
       </form>
+      <button className="submitBtn" type="submit" form="resume-form">Generate Resume</button>
     </>
   );
 }
