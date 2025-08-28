@@ -5,9 +5,12 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 2%;
+  color-scheme: light dark;
 }
 .card-container{
-  background-color: aliceblue;
+  background: #ddccaa;
+  color: #384959;
+  background-color: #BDDDfC;
   width: 100%;
   padding: 20px;
   border: 2px solid #ccc; /* Solid border with a light gray color */
@@ -44,6 +47,9 @@ textarea{
   width: 90vh;
   height: 20vh;
 }
-.submitBtn{
-  text-align: center;
+@media (prefers-color-scheme: dark) {
+  .card-container{
+    background-color: #384959;
+    color: rgba(255, 255, 255, 0.87);
+  }
 }
