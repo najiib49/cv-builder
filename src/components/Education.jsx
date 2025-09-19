@@ -1,4 +1,4 @@
-export default function Education() {
+export default function Education({cvData, onChange}) {
   return (
     <>
       <div className="card-container">
@@ -9,6 +9,8 @@ export default function Education() {
             <input
               type="text"
               name="school"
+              value={cvData.school}
+              onChange={onChange}
               placeholder="University of Example"
             />
           </div>
@@ -17,12 +19,14 @@ export default function Education() {
             <input
               type="text"
               name="study"
+              value={cvData.study}
+              onChange={onChange}
               placeholder="B.Sc in Computing Science"
             />
           </div>
           <div className="form-group">
             <label htmlFor="">Date of Study</label>
-            <input type="text" name="studyDate" placeholder="2018 - 2022" />
+            <input type="text" name="studyDate" value={cvData.studyDate} onChange={onChange} placeholder="2018 - 2022" />
           </div>
         </div>
       </div>
