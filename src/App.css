@@ -47,9 +47,66 @@ textarea{
   width: 90vh;
   height: 20vh;
 }
+.resume-container{
+  width: 80%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fafafa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: grid;
+  /* grid-template-columns: 1fr; */
+  grid-template-areas: 
+  "header"
+  "experience"
+  "education";
+  grid-area: header;
+  margin-top: 0;
+}
+.tagline {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #666;
+}
+.experience{
+  grid-area: experience;
+}
+.education{
+  grid-area: education;
+}
+.resume-header{
+  text-align: center;
+}
+.preview-edit{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+}
+
 @media (prefers-color-scheme: dark) {
   .card-container{
-    background-color: #384959;
-    color: rgba(255, 255, 255, 0.87);
+    /* background-color: #384959; */
+    background-color: #37474f;
+    background-color: #1f2a33;
+    /* color: rgba(255, 255, 255, 0.87); */
   }
+  body{
+    background-color: #12181b;
+    /* color: #f0f0f0; */
+  }
+  .resume-container{
+    background-color: #1f2a33;
+  }
+  h1, h3, label{
+    color: #b9dcf7;
+  }
+
+  #root, section h3{
+    color: #f0f0f0;
+  }
+  button{
+    background-color: #e3a557;
+  }
+
 }

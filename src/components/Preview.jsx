@@ -12,29 +12,29 @@ export default function Preview({data, setIsSubmitted, setIsEditing}) {
     }
     return (
     <>
-      <div>
+      <div className="preview-edit">
         <p>Resume  Preview</p>
         <button onClick={handEdit}>Edit Resume</button>
       </div>
-      <div>
-        <h1>{data.fullName}</h1>
-        <p>{data.email}</p> <span>|</span> <p>{data.phone}</p>
-        <br />
-        <div>
-            <h3>Education</h3>
-            <h4>{data.school}</h4>
-            <p>{data.study}</p>
-            <p>{data.studyDate}</p>
-        </div>
-        <div>
-            <h3>Experience</h3>
-            <h4>{data.company}</h4>
-            <p>{data.dateFrom}</p>
-            <p>{data.dateTo}</p>
-            <h5>{data.position}</h5>
+      <main className="resume-container">
+        <header className="resume-header">
+            <h1>{data.fullName}</h1>
+            <p className="tagline"><em>{data.email} | {data.phone}</em></p>
+        </header>
+        <section>
+            <h2>Experience</h2>
+            <h3>{data.position}</h3>
+            <p>{data.company} | <em>{data.dateFrom} &mdash; {data.dateTo}</em></p>
             <ul>{lines.map(result => <li>{result}</li>)}</ul>
-        </div>
-      </div>
+        </section>
+        <section>
+            <h2>Education</h2>
+            <article>
+                <h3>{data.study}</h3>
+                <p>{data.school} | <em>{data.studyDate}</em></p>
+            </article>
+        </section>
+      </main>
     </>
   );
 }
