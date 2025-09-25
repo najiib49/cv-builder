@@ -1,15 +1,20 @@
-export default function Preview({data}) {
+export default function Preview({data, setIsSubmitted, setIsEditing}) {
     console.log(
         "fullName:", data.fullName,
         "email:",data.email,
         "phone:", data.number
     )
     let lines = data.responsibility.split('\n').filter(line => line.trim() !=='')
+
+    function handEdit(){
+        setIsEditing(true)
+        setIsSubmitted(false)
+    }
     return (
     <>
       <div>
         <p>Resume  Preview</p>
-        <button>Edit Resume</button>
+        <button onClick={handEdit}>Edit Resume</button>
       </div>
       <div>
         <h1>{data.fullName}</h1>

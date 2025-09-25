@@ -7,19 +7,21 @@ import Preview from './components/Preview';
 
 function App() {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isEditing, setIsEditing] = useState(false)
   const [cvData, setCvData] = useState({
-      "fullName": '',
-      "email":"",
-      "phone":"",
-      "school":"",
-      "study":"",
-      "studyDate":"",
-      "company":"",
-      "position":"",
-      "dateFrom":"",
-      "dateTo":"",
-      "responsibility":[],
+    "fullName": '',
+    "email":"",
+    "phone":"",
+    "school":"",
+    "study":"",
+    "studyDate":"",
+    "company":"",
+    "position":"",
+    "dateFrom":"",
+    "dateTo":"",
+    "responsibility":[],
   });
+  let btnText = isEditing ? "Re-genarate Resume" : "Generate Resume" 
   const handleInputChange = (e) => {
     const {name, value} = e.target;
     // console.log("HandleChange")
@@ -29,12 +31,13 @@ function App() {
   }
   function handleSubmit (e){
     e.preventDefault()
+    setIsEditing(false)
     setIsSubmitted(true)
   }
 
   return (
     <>
-    {isSubmitted ? (<Preview data={cvData}/>)
+    {isSubmitted ? (<Preview data={cvData} setIsSubmitted={setIsSubmitted} setIsEditing={setIsEditing}/>)
     :(
       <>
         <h1>Resume Builder</h1>
@@ -47,7 +50,7 @@ function App() {
           <Experience cvData={cvData} onChange={handleInputChange}/>
           <br />
         </form>
-        <button className="submitBtn" type="submit" form="resume-form">Generate Resume</button>
+        <button className="submitBtn" type="submit" form="resume-form">{btnText}</button>
       </>
     )}
     </>
