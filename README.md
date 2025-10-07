@@ -8,7 +8,7 @@ This project was created as part of a learning exercise to practice **state mana
 
 - Add and display **general information** (Name, Email, Phone Number)  
 - Add and display **educational experience** (School Name, Title of Study, Date of Study)  
-- Add and display **practical experience** (Company Name, Position Title, Responsibilities, Date From–Until)  
+- Add and display **practical experience** (Company Name, Position Title, Responsibilities, Date From-To)  
 - **Edit and submit** functionality for each section:
   - Submit displays the information in a formatted view
   - Edit switches back to input mode with existing values pre-filled
@@ -20,8 +20,14 @@ This project was created as part of a learning exercise to practice **state mana
 - React functional components and state (`useState`)  
 - Passing data via **props**  
 - Conditional rendering (form vs. display view)  
-- Handling and validating form input  
 - Project structuring with `components` and `styles` directories
 
 ## Live Demo
 TBD
+
+## Upcoming in Version 2
+
+- Ability to add multiple experiences dynamically
+- Improved layout and styling
+- Handling and validating form input  
+- Optional sections (e.g., Skills, Projects)
