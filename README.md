@@ -1,12 +1,27 @@
-# React + Vite
+# CV Builder App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive **CV Builder** built with **React**. This app allows users to create and preview their CV in real time by filling out personal, educational, and practical experience information.
 
-Currently, two official plugins are available:
+This project was created as part of a learning exercise to practice **state management**, **props**, **component structure**, and **form handling** in React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Add and display **general information** (Name, Email, Phone Number)  
+- Add and display **educational experience** (School Name, Title of Study, Date of Study)  
+- Add and display **practical experience** (Company Name, Position Title, Responsibilities, Date From–Until)  
+- **Edit and submit** functionality for each section:
+  - Submit displays the information in a formatted view
+  - Edit switches back to input mode with existing values pre-filled
+- Clean and structured component-based architecture
+- Basic styling with modular CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Concepts Practiced
+
+- React functional components and state (`useState`)  
+- Passing data via **props**  
+- Conditional rendering (form vs. display view)  
+- Handling and validating form input  
+- Project structuring with `components` and `styles` directories
+
+## Live Demo
+TBD
