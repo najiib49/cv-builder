@@ -23,7 +23,7 @@ This project was created as part of a learning exercise to practice **state mana
 - Project structuring with `components` and `styles` directories
 
 ## Live Demo
-TBD
+[View Live App](https://njbcv-builder.netlify.app/)
 
 ## Upcoming in Version 2
 
